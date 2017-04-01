@@ -8,9 +8,11 @@ for i = x
     for ii = 1:c
         b(ii) = a(c - ii +1);
     end
-    y(i + 1) = str2double(b);
-    z(i + 1) = y(i + 1) / x(i + 1);
+    z(i + 1) = str2double(b);
+    y(i + 1) = z(i + 1) / x(i + 1);
 end
 x = log2(x);
-z = log2(z);
-plot(x, z)
+y = log2(y);
+plot(x, y)
+xlabel('log_2(x)')
+ylabel('log_2(y)')
